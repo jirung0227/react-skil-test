@@ -53,13 +53,26 @@ npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin es
 **패키지 설명**
 
 - **eslint-config-prettier** : ESLint와 Prettier의 충돌을 방지하기 위해 사용됩니다. 이 패키지는 ESLint의 포매팅 관련 규칙을 모두 비활성하여 Prettier가 코드 스타일을 전적으로 관리할 수 있게 합니다.
-- **eslint-plugin-prettier**
+- **eslint-plugin-prettier** :
   Prettier를 ESLint규칙으로 통합합니다. ESLint가 Prettier의 포매팅 규칙을 검사하도록 하여, 코드 포매팅과 스타일을 일관되게 유지할 수 있습니다.
 
 **설치**
-
 ```
 npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev
+```
+#### Tailwindcss(PostCSS 및 Autoprefixer 포함)
+유틸리티 클래스 기반의 CSS 프레임워크로, 빠르고 쉽게 스타일을 적용하고 맞춤화할 수 있도록 설계된 도구입니다.
+
+**패키지 설명**
+
+- **postcss**  : tailwindCSS와 마찬가지로 PostCSS의 플러그인 형태로 동작하므로 autoprefixer기능을 사용하려면 PostCSS도 함께 설치해야 합니다.
+- **autoprefixer** : 사용자 CSS가 벤더 접두사를 붙이지 않더라도 후처리 과정에서 자동으로 벤더 접두사가 붙은 CSS를 생성해줍니다.
+- **tailwindcss init -p**: Tailwind CSS 초기 설정 파일을 생성합니다. p옵션 설정시 PostCSS 설정 파일도 함께 생성합니다.
+
+**설치**
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
 ```
 
 #### TanstackQuery + Recoil 추가
@@ -71,3 +84,4 @@ npm install @tanstack/react-query recoil
 ```bash
 npm install --save-dev @types/react-query @types/recoil
 ```
+

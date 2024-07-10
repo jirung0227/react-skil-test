@@ -7,6 +7,9 @@ const router = createBrowserRouter([
       <div>
         <h1>Hello World</h1>
         <Link to="about">About Us</Link>
+        <h1 className="text-3xl font-bold underline">
+          Hello world?
+        </h1>
       </div>
     ),
   },
