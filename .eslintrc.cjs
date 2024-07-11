@@ -34,5 +34,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'react/react-in-jsx-scope': 'off', //Import React from 'react' 를 사용하지 않아도 되도록 설정
   },
 };
