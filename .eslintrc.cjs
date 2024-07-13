@@ -26,6 +26,7 @@ module.exports = {
     'eslint:recommended', // ESLint에서 추천하는 기본 설정
     'plugin:@typescript-eslint/recommended', //TypeScript 관련 추천 설정
     'plugin:react/recommended', //React 관련 추천 설정
+    'plugin:storybook/recommended', //Storybook 관련 추천 설정
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
