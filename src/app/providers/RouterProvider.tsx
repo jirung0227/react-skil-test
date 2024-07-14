@@ -1,9 +1,10 @@
 import {
   createBrowserRouter,
-  Link,
   RouterProvider,
   useRouteError,
 } from 'react-router-dom';
+import { HomePage } from '../../pages/home/ui/HomePage';
+import { GenericLayout } from '../../pages/layouts/ui/GenericLayout';
 
 interface RouteError {
   status?: string;
@@ -34,13 +35,13 @@ const router = createBrowserRouter([
   {
     errorElement: <ErrorPage />,
     path: '/',
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="about">About Us</Link>
-        <h1 className="text-3xl font-bold underline">Hello world?</h1>
-      </div>
-    ),
+    element: <GenericLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+    ],
   },
 ]);
 
