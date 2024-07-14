@@ -29,6 +29,10 @@ src/
 │   └── index.tsx
 ```
 
+- **공통 에러 코드** : shared/constants/errorCodes.ts
+- **도메인 모델 관련 에러 코드** : entities/{entity}/constants/errorCodes.ts
+- **특정 기능 관련 에러 코드** : features/{feature}/constants/errorCodes.ts
+
 #### ESLint
 
 ESLint는 JavaScript 및 TypeScript 코드에서 문법 오류와 스타일 문제를 찾아주는 정적 코드 분석 도구입니다.
