@@ -11,6 +11,8 @@ npm run dev
 
 #### FSD 디렉토리 구조 적용
 
+![fsd](./public/fsd.jpg)
+
 **규칙**
 
 - 레이어간 위계질서 : 상위 레벨이 있는 레이어는 하위레벨을 의존성으로 가질 수 있지만 반대는 불가 (추상화, 다형성, 상속)
@@ -19,7 +21,6 @@ npm run dev
 **구조**
 
 ```
-// 1단계
 Layers/
 ├── app/
 │   └── 전역 설정 / Provider, Router, Client같은 HOC가 slice가 됨 / slice 없음
@@ -33,16 +34,6 @@ Layers/
 │   ├── 데이터 / 데이터가 slice, api segment에서는 해당 행동을 요청함
 ├── shared/
 └──  └── 공유 컴포넌트 / slice 없음
-// 2단계
-Slices/
-├── user/
-├── post/
-└── comment/
-// 3단계
-Segments/
-├── ui/
-├── model/
-└── api/
 ```
 
 - **공통 에러 코드** : shared/constants/errorCodes.ts
