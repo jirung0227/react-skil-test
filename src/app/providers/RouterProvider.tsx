@@ -1,10 +1,10 @@
+import { HomePage } from '@/pages/home/index.tsx';
+import { GenericLayout } from '@/widgets/layouts/ui/GenericLayout.tsx';
 import {
   createBrowserRouter,
   RouterProvider,
   useRouteError,
 } from 'react-router-dom';
-import { HomePage } from '../../pages/home/ui/HomePage';
-import { GenericLayout } from '../../pages/layouts/ui/GenericLayout';
 
 interface RouteError {
   status?: string;

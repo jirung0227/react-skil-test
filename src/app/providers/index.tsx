@@ -1,5 +1,5 @@
-import { QueryClientProvider } from "./QueryClientProvider";
-import { BrowserRouter } from "./RouterProvider";
+import { QueryClientProvider } from '@/app/providers/QueryClientProvider.tsx';
+import { BrowserRouter } from '@/app/providers/RouterProvider.tsx';
 
 export const Providers = () => {
   return (

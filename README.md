@@ -9,24 +9,41 @@ npm install
 npm run dev
 ```
 
-#### FSD 디렉토리 구조 적용 ( 임시 구조 )
+#### FSD 디렉토리 구조 적용
+
+**규칙**
+
+- 레이어간 위계질서(추상화, 다형성, 상속)
+
+- index.js에서 export한 것만 import한다. (캡슐화)
+
+**구조**
 
 ```
-src/
+// 1단계
+Layers/
 ├── app/
-│   └── index.tsx
-├── entities/
-│   └── user/
-├── features/
-│   └── auth/
-├── shared/
-│   ├── api/
-│   ├── components/
-│   └── lib/
+│   └── 전역 설정/Provider, Router, Client같은 HOC가 slice가 됨/ slice 없음
 ├── pages/
-│   ├── home/
-│   ├── about/
-│   └── index.tsx
+│   ├── 주소별 페이지/각각의 주소별 페이지가 slice
+├── widgets/
+│   ├── feature의 묶음 / 어떻게 묶을지는 재사용 여부에 따라
+├── feature의/
+│   ├── 행동 / 동사가 slice, api segment에서는 해당 행동을 요청함
+├── entities/
+│   ├── 데이터 / 데이터가 slice, api segment에서는 해당 행동을 요청함
+├── shared/
+└──  └── 공유 컴포넌트 / slice 없음
+// 2단계
+Slices/
+├── user/
+├── post/
+└── comment/
+// 3단계
+Segments/
+├── ui/
+├── model/
+└── api/
 ```
 
 - **공통 에러 코드** : shared/constants/errorCodes.ts
@@ -153,4 +170,22 @@ UI 컴포넌트의 독립적 개발, 테스트, 문서화를 지원하는 강력
 
 ```
 npx storybook@latest init
+```
+
+### 사용자 설정
+
+**JavaScript › Preferences: Import Module Specifier**
+자동 가져오기의 기본 경로 스타일입니다.
+절대 경로만 사용하기위해 설정
+
+```
+"javascript.preferences.importModuleSpecifier": "non-relative"
+```
+
+**TypeScript › Preferences: Import Module Specifier Ending**
+자동 가져오기를 위한 기본 경로 끝자리.
+import시 확장자를 필수로 붙이기 위해 설정
+
+```
+"typescript.preferences.importModuleSpecifierEnding": "js"
 ```

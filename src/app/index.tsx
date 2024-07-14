@@ -1,10 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { Providers } from "./providers/index.tsx";
 import '@/app/index.css';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+import { Providers } from '@/app/providers/index.tsx';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Providers />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
