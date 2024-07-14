@@ -13,8 +13,7 @@ npm run dev
 
 **규칙**
 
-- 레이어간 위계질서(추상화, 다형성, 상속)
-
+- 레이어간 위계질서 : 상위 레벨이 있는 레이어는 하위레벨을 의존성으로 가질 수 있지만 반대는 불가 (추상화, 다형성, 상속)
 - index.js에서 export한 것만 import한다. (캡슐화)
 
 **구조**
@@ -23,12 +22,12 @@ npm run dev
 // 1단계
 Layers/
 ├── app/
-│   └── 전역 설정/Provider, Router, Client같은 HOC가 slice가 됨/ slice 없음
+│   └── 전역 설정 / Provider, Router, Client같은 HOC가 slice가 됨 / slice 없음
 ├── pages/
-│   ├── 주소별 페이지/각각의 주소별 페이지가 slice
+│   ├── 주소별 페이지 / 각각의 주소별 페이지가 slice
 ├── widgets/
 │   ├── feature의 묶음 / 어떻게 묶을지는 재사용 여부에 따라
-├── feature의/
+├── features/
 │   ├── 행동 / 동사가 slice, api segment에서는 해당 행동을 요청함
 ├── entities/
 │   ├── 데이터 / 데이터가 slice, api segment에서는 해당 행동을 요청함
