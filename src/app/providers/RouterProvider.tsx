@@ -1,5 +1,6 @@
 import { HomePage } from '@/pages/home/index.tsx';
-import { GenericLayout } from '@/widgets/layouts/ui/GenericLayout.tsx';
+import { GenericLayout } from '@/widgets/layouts/index.tsx';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -34,12 +35,18 @@ const ErrorPage = () => {
 const router = createBrowserRouter([
   {
     errorElement: <ErrorPage />,
-    path: '/',
-    element: <GenericLayout />,
     children: [
       {
-        index: true,
-        element: <HomePage />,
+        element: <GenericLayout />,
+        children: [
+          /**
+           * @todo 추후 homePageRoute로 변경
+           */
+          {
+            index: true,
+            element: <HomePage />,
+          },
+        ],
       },
     ],
   },
