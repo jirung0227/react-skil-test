@@ -1,1 +1,5 @@
-export { GenericLayout } from '@/widgets/layouts/ui/GenericLayout.tsx';
+export {
+  GenericLayout,
+  GuestLayout,
+  NakedLayout,
+} from '@/widgets/layouts/ui/Layout.tsx';

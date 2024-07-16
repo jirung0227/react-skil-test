@@ -12,23 +12,22 @@ export const GenericLayout = () => {
     </>
   );
 };
-/**
- * @description 사용자 네비게이션 (임시)
- */
-const UserNavigation = () => {
+
+export const GuestLayout = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/user/1">사용자 1</a>
-        </li>
-        <li>
-          <a href="/user/2">사용자 2</a>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <GuestNavigation />
+      <Outlet />
+      <footer />
+    </>
   );
 };
+
+export const NakedLayout = () => {
+  return <Outlet />;
+};
+
+export default GuestLayout;
 
 /**
  * @description 게스트 네비게이션 (임시)
@@ -42,6 +41,24 @@ const GuestNavigation = () => {
         </li>
         <li>
           <a href="/user/2">guest 2</a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+/**
+ * @description 사용자 네비게이션 (임시)
+ */
+const UserNavigation = () => {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <a href="/user/1">사용자 1</a>
+        </li>
+        <li>
+          <a href="/user/2">사용자 2</a>
         </li>
       </ul>
     </nav>

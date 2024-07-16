@@ -1,5 +1,6 @@
 import { HomePage } from '@/pages/home/index.tsx';
-import { GenericLayout } from '@/widgets/layouts/index.tsx';
+import { LoginPage } from '@/pages/login/index.tsx';
+import { GenericLayout, GuestLayout } from '@/widgets/layouts/index.tsx';
 
 import {
   createBrowserRouter,
@@ -40,11 +41,20 @@ const router = createBrowserRouter([
         element: <GenericLayout />,
         children: [
           /**
-           * @todo 추후 homePageRoute로 변경
+           * @todo 추후 route 파일 분리 고려
            */
           {
             index: true,
             element: <HomePage />,
+          },
+        ],
+      },
+      {
+        element: <GuestLayout />,
+        children: [
+          {
+            path: 'login',
+            element: <LoginPage />,
           },
         ],
       },
