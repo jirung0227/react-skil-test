@@ -52,11 +52,23 @@ const router = createBrowserRouter([
       {
         element: <GuestLayout />,
         children: [
-          {
-            path: 'login',
-            element: <LoginPage />,
-          },
+          // {
+          //   path: 'login',
+          //   element: <LoginPage />,
+          //   /**
+          //    * @todo loader를 사용하여 사용자 로그인 여부 확인
+          //    */
+          //   /**
+          //    * @description loader : 컴포넌트가 렌더링 되기 전 컴포넌트에 데이터를 전달하는 역할을 합니다.
+          //    * useLoaderData()훅을 통해 데이터를 가져올 수 있습니다.
+          //    */
+          //   // loader: async () => {}
+          // },
         ],
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
       },
     ],
   },
