@@ -37,10 +37,7 @@ const GuestNavigation = () => {
     <nav>
       <ul>
         <li>
-          <a href="/user/1">guest 1</a>
-        </li>
-        <li>
-          <a href="/user/2">guest 2</a>
+          <a href="/tailwind-css-test">tailwind-css-test</a>
         </li>
       </ul>
     </nav>
