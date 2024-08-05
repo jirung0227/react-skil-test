@@ -179,3 +179,7 @@ import시 확장자를 필수로 붙이기 위해 설정
 ```
 "typescript.preferences.importModuleSpecifierEnding": "js"
 ```
+
+### 도입 예정
+
+- supabase를 통한 Oauth 인증 구현
