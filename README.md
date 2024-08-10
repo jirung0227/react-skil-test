@@ -162,6 +162,16 @@ UI 컴포넌트의 독립적 개발, 테스트, 문서화를 지원하는 강력
 npx storybook@latest init
 ```
 
+### react-icons
+
+react의 라이브러리로 아이콘을 컴포넌트의 형식으로 사용할 수 있다.
+
+**설치**
+
+```
+npm install react-icons --save
+```
+
 ### 사용자 설정
 
 **JavaScript › Preferences: Import Module Specifier**
@@ -179,7 +189,3 @@ import시 확장자를 필수로 붙이기 위해 설정
 ```
 "typescript.preferences.importModuleSpecifierEnding": "js"
 ```
-
-### 도입 예정
-
-- supabase를 통한 Oauth 인증 구현
