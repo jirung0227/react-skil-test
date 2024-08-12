@@ -1,3 +1,5 @@
+import { FiActivity } from 'react-icons/fi';
+import { LuMenu } from 'react-icons/lu';
 import { Outlet } from 'react-router-dom';
 
 export const GenericLayout = () => {
@@ -34,13 +36,16 @@ export default GuestLayout;
  */
 const GuestNavigation = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/tailwind-css-test">tailwind-css-test</a>
-        </li>
-      </ul>
-    </nav>
+    <header className="h-14 ">
+      <div className="flex justify-between items-center max-xl:px-0 max-w-[1200px] h-full m-auto">
+        <div className="flex items-center">
+          <FiActivity size="18" className="mr-1" /> Guest
+        </div>
+        <div>
+          <LuMenu size="20" />
+        </div>
+      </div>
+    </header>
   );
 };
 
@@ -49,15 +54,15 @@ const GuestNavigation = () => {
  */
 const UserNavigation = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/user/1">사용자 1</a>
-        </li>
-        <li>
-          <a href="/user/2">사용자 2</a>
-        </li>
-      </ul>
-    </nav>
+    <header className="h-14 ">
+      <div className="flex justify-between items-center max-xl:px-0 max-w-[1200px] h-full m-auto">
+        <div className="flex items-center">
+          <FiActivity size="18" className="mr-1" /> User
+        </div>
+        <div>
+          <LuMenu size="20" />
+        </div>
+      </div>
+    </header>
   );
 };
