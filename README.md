@@ -162,14 +162,19 @@ UI 컴포넌트의 독립적 개발, 테스트, 문서화를 지원하는 강력
 npx storybook@latest init
 ```
 
-### react-icons
+### react-icons, react-spinners
 
+react-icons
 react의 라이브러리로 아이콘을 컴포넌트의 형식으로 사용할 수 있다.
+
+react-spinners
+react의 라이브러리로 로딩상태를 컴포넌트의 형식으로 사용할 수 있다.
 
 **설치**
 
 ```
 npm install react-icons --save
+npm install --save react-spinners
 ```
 
 ### 사용자 설정
