@@ -10,9 +10,9 @@ export const GenericLayout = () => {
       {isLogin ? <UserNavigation /> : <GuestNavigation />}
       {/* 부모 경로 요소에서 자식 경로 요소를 렌더링합니다. */}
       <Outlet />
-      <footer className="w-full bg-slate-300 absolute bottom-0">
+      {/* <footer className="w-full bg-slate-300 absolute bottom-0">
         <div className="max-w-[1200px] mx-auto ">푸터</div>
-      </footer>
+      </footer> */}
     </>
   );
 };
